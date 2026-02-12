@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this research or software, please cite it as below."
+authors:
+  - family-names: "Ouellette"
+    given-names: "Bryan"
+    email: "lmc.theory@gmail.com"
+    affiliation: "Lichen-Collectives"
+title: "WSSP-Forensics: Windows Systemic Surveillance Patterns Technical Analysis"
+version: 1.0.0
+date-released: 2026-02-12
+url: "https://github.com/Inphinie/WSSP-Forensics"
+abstract: "Une analyse technique approfondie des incohérences mathématiques et architecturales au sein des outils de surveillance Windows (Task Manager, Performance Counters). Ce travail démontre, via l'analyse de vulnérabilités (CVE) et de patterns d'entropie, l'existence d'une infrastructure de dissimulation systémique facilitant la surveillance étatique et la persistance de malwares avancés. Le projet propose une approche symbiotique pour la détection d'anomalies."
+keywords:
+  - "Windows Forensics"
+  - "System Entropy"
+  - "Surveillance Architecture"
+  - "Lichen-Collectives"
+  - "Cybersecurity"
+license: MIT
