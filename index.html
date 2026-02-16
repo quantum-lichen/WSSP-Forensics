@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WSSP // Windows Systemic Surveillance Patterns</title>
+    <title>WSSP Analysis // Windows as Covert Infrastructure</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
     
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
         :root {
-            --bg-color: #0d1117;
-            --text-color: #c9d1d9;
-            --accent-color: #f85149; /* Rouge Alerte/Forensic */
-            --secondary-color: #8b949e;
-            --border-color: #30363d;
-            --code-bg: #161b22;
-            --terminal-green: #3fb950;
+            --bg-color: #050505;
+            --text-color: #d1d1d1;
+            --alert-color: #ff3e3e; /* Rouge Forensic */
+            --warning-color: #ffcc00;
+            --border-color: #2a2a2a;
+            --code-bg: #0f0f0f;
+            --highlight: #1a1a1a;
         }
 
         body {
-            font-family: 'Fira Code', monospace;
+            font-family: 'Roboto Mono', monospace;
             background-color: var(--bg-color);
             color: var(--text-color);
-            line-height: 1.6;
+            line-height: 1.5;
             margin: 0;
             padding: 0;
             display: flex;
@@ -34,81 +34,98 @@
         }
 
         .container {
-            max-width: 900px;
-            width: 90%;
-            padding: 40px 20px;
+            max-width: 950px;
+            width: 92%;
+            padding: 50px 20px;
         }
 
         header {
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 20px;
-            margin-bottom: 40px;
+            border-left: 5px solid var(--alert-color);
+            padding-left: 20px;
+            margin-bottom: 50px;
         }
 
         h1 {
-            font-size: 1.5rem;
-            color: var(--accent-color);
+            font-size: 1.6rem;
+            color: #fff;
             margin: 0;
-            letter-spacing: -1px;
+            text-transform: uppercase;
         }
 
-        .tagline {
-            font-size: 0.9rem;
-            color: var(--secondary-color);
-            margin-top: 10px;
+        .report-id {
+            color: var(--alert-color);
+            font-weight: bold;
+            font-size: 0.8rem;
         }
 
-        .warning-box {
-            border: 1px solid var(--accent-color);
-            background-color: rgba(248, 81, 73, 0.1);
-            padding: 15px;
-            border-radius: 4px;
-            margin: 20px 0;
-            font-size: 0.9rem;
+        .abstract {
+            background: var(--highlight);
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 40px;
+            font-style: italic;
         }
 
         .math-block {
             background-color: var(--code-bg);
-            border: 1px solid var(--border-color);
+            border: 1px dotted var(--alert-color);
             padding: 25px;
-            border-radius: 6px;
             margin: 30px 0;
-            overflow-x: auto;
+            text-align: center;
         }
 
-        .data-table {
+        .evidence-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .card {
+            border: 1px solid var(--border-color);
+            padding: 20px;
+            background: #080808;
+        }
+
+        .card h3 {
+            color: var(--alert-color);
+            margin-top: 0;
+            font-size: 1rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        table {
             width: 100%;
             border-collapse: collapse;
-            margin: 30px 0;
-            font-size: 0.85rem;
+            margin-top: 30px;
+            font-size: 0.8rem;
         }
 
-        .data-table th, .data-table td {
+        th, td {
             border: 1px solid var(--border-color);
             padding: 12px;
             text-align: left;
         }
 
-        .data-table th {
-            background-color: var(--code-bg);
-            color: var(--accent-color);
+        th {
+            background: var(--highlight);
+            color: var(--alert-color);
         }
 
-        .terminal-text {
-            color: var(--terminal-green);
+        .critical {
+            color: var(--alert-color);
+            font-weight: bold;
         }
 
         footer {
-            text-align: center;
-            padding: 40px;
+            margin-top: 60px;
+            padding: 30px;
             border-top: 1px solid var(--border-color);
             width: 100%;
+            text-align: center;
             font-size: 0.7rem;
-            color: var(--secondary-color);
-        }
-
-        .glitch-effect {
-            text-shadow: 2px 0 #00ff9d, -2px 0 #ff00ea;
+            opacity: 0.6;
         }
     </style>
 </head>
@@ -116,74 +133,93 @@
 
     <div class="container">
         <header>
-            <div style="margin-bottom: 5px;">
-                <span class="terminal-text">[SCANNING_SYSTEM...]</span>
-            </div>
-            <h1 class="glitch-effect">👁️ WSSP-FORENSICS</h1>
-            <div class="tagline">Windows Systemic Surveillance Patterns</div>
+            <div class="report-id">RÉF : WSSP-ANALYSIS-2026</div>
+            <h1>Windows comme Infrastructure de Dissimulation</h1>
+            <p style="margin-top: 10px; opacity: 0.8;">Preuves, Patterns et Implications Géopolitiques des Anomalies Systémiques [cite: 276, 277]</p>
         </header>
 
-        <section>
-            <div class="warning-box">
-                <strong>SYNOPSIS :</strong> Les incohérences mathématiques observées ne sont pas des bugs, mais des caractéristiques fonctionnelles d'une infrastructure de dissimulation.
-            </div>
-
-            <p>
-                WSSP est un projet de recherche visant à quantifier les anomalies systémiques dans les outils de surveillance natifs. 
-                Nous modélisons la divergence des ressources ($D_{res}$) pour exposer les processus fantômes ($\Phi$).
-            </p>
-
-            <div class="math-block">
-                $$ \Delta = R_{total} - \sum_{i \in V} P_i \gg \epsilon $$
-                <div style="text-align: center; font-size: 0.8rem; color: var(--secondary-color); margin-top: 10px;">
-                    Divergence = Ressources Rapportées - Somme des Processus Visibles
-                </div>
-            </div>
-
-            <h3>Vecteurs d'Opacité Identifiés</h3>
-            <table class="data-table">
-                <thead>
-                    <tr>
-                        <th>Vecteur</th>
-                        <th>Anomalie</th>
-                        <th>Référence</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Mémoire RAM</td>
-                        <td>$\Delta$ (Total vs Somme)</td>
-                        <td>Volatility Forensics</td>
-                    </tr>
-                    <tr>
-                        <td>PerfCounters</td>
-                        <td>Valeurs incohérentes</td>
-                        <td>CVE-2022-37969</td>
-                    </tr>
-                    <tr>
-                        <td>Boot Process</td>
-                        <td>Persistance Kernel</td>
-                        <td>CVE-2022-21894</td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <p>
-                L'objectif est de restaurer la transparence via une <strong>"Contre-Mesure Symbiotique"</strong> utilisant l'IA et l'analyse forensique externe.
-            </p>
-
-            <div style="margin-top: 40px;">
-                <a href="https://github.com/Inphinie/WSSP-Forensics" style="color: var(--accent-color); text-decoration: none; border: 1px solid var(--accent-color); padding: 10px 20px; border-radius: 4px;">
-                    SOURCE_CODE >> ACCESS_REPO
-                </a>
-            </div>
+        <section class="abstract">
+            <strong>RÉSUMÉ :</strong> L'analyse démontre que les outils de surveillance natifs (Task Manager, Resource Monitor) présentent des incohérences mathématiques systématiques[cite: 278, 279]. Ces failles facilitent la dissimulation de malwares avancés et de processus fantômes, suggérant une architecture conçue pour la surveillance systémique[cite: 280, 282].
         </section>
+
+        <h2>Preuves de Divergence des Ressources</h2>
+        <p>
+            Les écarts observés entre les ressources rapportées et la consommation réelle dépassent les marges d'erreur statistique[cite: 293].
+        </p>
+
+        <div class="math-block">
+            $$ \text{Divergence RAM} = 24\% \text{ (Affichés)} \leftrightarrow 42\% \text{ (Réels)} $$
+            <div style="font-size: 0.75rem; margin-top: 10px;">Écart documenté via captures d'écran et logs système.</div>
+        </div>
+
+        <div class="evidence-grid">
+            <div class="card">
+                <h3>Vecteurs de Dissimulation</h3>
+                <ul>
+                    <li><strong>Processus Fantômes :</strong> PIDs invisibles dans l'interface mais actifs en mémoire physique[cite: 299].</li>
+                    <li><strong>Manipulation WMI :</strong> Exécution de commandes avec journalisation minimale[cite: 308].</li>
+                    <li><strong>Télémétrie DiagTrack :</strong> Détournement potentiel pour l'exfiltration de données[cite: 305].</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Vulnérabilités Critiques</h3>
+                <ul>
+                    <li><strong>CVE-2022-37969 :</strong> Falsification des compteurs de performance[cite: 296].</li>
+                    <li><strong>CVE-2022-21894 :</strong> Contournement Secure Boot (BlackLotus)[cite: 315, 331].</li>
+                    <li><strong>CVE-2025-64328 :</strong> Injection de commande via CLI React Native[cite: 297].</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2>Tableau de Bord des Anomalies</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Élément</th>
+                    <th>Impact / Exploitation</th>
+                    <th>Preuve Technique</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="critical">Écart RAM</td>
+                    <td>Masquage de malwares résidents</td>
+                    <td>Task Manager vs. Somme Processus </td>
+                </tr>
+                <tr>
+                    <td>SMBIOS</td>
+                    <td>Collecte furtive d'infos matérielles</td>
+                    <td>Contournement des logs d'audit [cite: 304, 309]</td>
+                </tr>
+                <tr>
+                    <td class="critical">BlackLotus</td>
+                    <td>Désactivation de BitLocker / Defender</td>
+                    <td>Bootkit UEFI persistant [cite: 317, 331]</td>
+                </tr>
+                <tr>
+                    <td>QakBot</td>
+                    <td>Distribution de ransomwares</td>
+                    <td>Exploitation de vulnérabilités Zero-Day [cite: 317, 331]</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Stratégies de Mitigation</h2>
+        <p>
+            La détection de ces anomalies nécessite des outils découplés du noyau Windows pour éviter l'aveuglement systémique[cite: 329, 338].
+        </p>
+        <ul>
+            <li><strong>Analyse Forensique :</strong> Utilisation de Volatility et Rekall pour identifier les PIDs orphelins[cite: 299, 324].</li>
+            <li><strong>IA Symbiotique :</strong> Automatisation de la détection de patterns suspects dans les flux de performance[cite: 325, 326].</li>
+            <li><strong>Audit Externe :</strong> Surveillance des hooks kernel via des outils tiers comme Sysmon[cite: 324, 329].</li>
+        </ul>
     </div>
 
     <footer>
         <p>
-            PROJECT: WSSP-FORENSICS // MAINTAINER: BRYAN OUELLETTE<br>
-            LICENCE: MIT // LICHEN-COLLECTIVES &copy; 2026
+            ANALYSE TECHNIQUE WSSP // LICHEN-COLLECTIVES<br>
+            DOCUMENTATION BASÉE SUR : "WINDOWS COMME INFRASTRUCTURE DE DISSIMULATION" (2026)<br>
+            MAINTENU PAR : BRYAN OUELLETTE
         </p>
     </footer>
 
