@@ -3,26 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CEML // Cognitive Entropy Minimization Law</title>
-    <meta name="description" content="Un cadre mathématique unifié pour la sélection de l'information dans les systèmes cognitifs.">
+    <title>WSSP // Windows Systemic Surveillance Patterns</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
     
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
         :root {
-            --bg-color: #0a0a0a;
-            --text-color: #e0e0e0;
-            --accent-color: #00ff9d; /* Vert Lichen */
-            --secondary-color: #6e7681;
+            --bg-color: #0d1117;
+            --text-color: #c9d1d9;
+            --accent-color: #f85149; /* Rouge Alerte/Forensic */
+            --secondary-color: #8b949e;
             --border-color: #30363d;
             --code-bg: #161b22;
+            --terminal-green: #3fb950;
         }
 
         body {
-            font-family: 'JetBrains Mono', monospace;
+            font-family: 'Fira Code', monospace;
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
@@ -31,151 +31,159 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            min-height: 100vh;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 900px;
             width: 90%;
             padding: 40px 20px;
         }
 
         header {
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 2px solid var(--accent-color);
             padding-bottom: 20px;
             margin-bottom: 40px;
         }
 
         h1 {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: var(--accent-color);
-            margin: 0 0 10px 0;
+            margin: 0;
+            letter-spacing: -1px;
         }
 
-        .subtitle {
-            color: var(--secondary-color);
+        .tagline {
             font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
+            color: var(--secondary-color);
+            margin-top: 10px;
+        }
+
+        .warning-box {
+            border: 1px solid var(--accent-color);
+            background-color: rgba(248, 81, 73, 0.1);
+            padding: 15px;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-size: 0.9rem;
         }
 
         .math-block {
             background-color: var(--code-bg);
             border: 1px solid var(--border-color);
+            padding: 25px;
             border-radius: 6px;
-            padding: 20px;
             margin: 30px 0;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            overflow-x: auto;
         }
 
-        .section-title {
-            margin-top: 50px;
-            border-left: 3px solid var(--accent-color);
-            padding-left: 15px;
-            font-size: 1.2rem;
-            font-weight: 700;
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 0.85rem;
         }
 
-        p {
-            margin-bottom: 20px;
-            text-align: justify;
+        .data-table th, .data-table td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
         }
 
-        .btn {
-            display: inline-block;
+        .data-table th {
             background-color: var(--code-bg);
             color: var(--accent-color);
-            border: 1px solid var(--accent-color);
-            padding: 10px 20px;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-            margin-top: 20px;
         }
 
-        .btn:hover {
-            background-color: var(--accent-color);
-            color: var(--bg-color);
+        .terminal-text {
+            color: var(--terminal-green);
         }
 
         footer {
-            margin-top: auto;
-            padding: 40px 0;
-            color: var(--secondary-color);
-            font-size: 0.8rem;
             text-align: center;
+            padding: 40px;
             border-top: 1px solid var(--border-color);
             width: 100%;
+            font-size: 0.7rem;
+            color: var(--secondary-color);
         }
 
-        .status-dot {
-            height: 10px;
-            width: 10px;
-            background-color: var(--accent-color);
-            border-radius: 50%;
-            display: inline-block;
-            margin-right: 10px;
-            box-shadow: 0 0 10px var(--accent-color);
+        .glitch-effect {
+            text-shadow: 2px 0 #00ff9d, -2px 0 #ff00ea;
         }
-
     </style>
 </head>
 <body>
 
     <div class="container">
         <header>
-            <div style="display: flex; align-items: center; margin-bottom: 10px;">
-                <span class="status-dot"></span>
-                <span style="font-size: 0.8rem; color: var(--accent-color);">SYSTEM ONLINE // LMC-PROTOCOL</span>
+            <div style="margin-bottom: 5px;">
+                <span class="terminal-text">[SCANNING_SYSTEM...]</span>
             </div>
-            <h1>CEML-LMC Unified Framework</h1>
-            <div class="subtitle">Loi de Minimisation de l'Entropie Cognitive</div>
+            <h1 class="glitch-effect">👁️ WSSP-FORENSICS</h1>
+            <div class="tagline">Windows Systemic Surveillance Patterns</div>
         </header>
 
         <section>
+            <div class="warning-box">
+                <strong>SYNOPSIS :</strong> Les incohérences mathématiques observées ne sont pas des bugs, mais des caractéristiques fonctionnelles d'une infrastructure de dissimulation.
+            </div>
+
             <p>
-                L'intelligence n'est pas l'accumulation de données, mais la compression efficace de la réalité.
-                Ce projet introduit un cadre mathématique unifiant la thermodynamique (Landauer) et la sémantique cognitive.
+                WSSP est un projet de recherche visant à quantifier les anomalies systémiques dans les outils de surveillance natifs. 
+                Nous modélisons la divergence des ressources ($D_{res}$) pour exposer les processus fantômes ($\Phi$).
             </p>
 
             <div class="math-block">
-                $$ I = H \times C $$
-                <div style="font-size: 0.8rem; color: var(--secondary-color); margin-top: 10px;">
-                    Information = Entropie Sémantique × Cohérence Structurelle
+                $$ \Delta = R_{total} - \sum_{i \in V} P_i \gg \epsilon $$
+                <div style="text-align: center; font-size: 0.8rem; color: var(--secondary-color); margin-top: 10px;">
+                    Divergence = Ressources Rapportées - Somme des Processus Visibles
                 </div>
             </div>
 
-            <div class="section-title">L'Axiome Fondamental</div>
+            <h3>Vecteurs d'Opacité Identifiés</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Vecteur</th>
+                        <th>Anomalie</th>
+                        <th>Référence</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mémoire RAM</td>
+                        <td>$\Delta$ (Total vs Somme)</td>
+                        <td>Volatility Forensics</td>
+                    </tr>
+                    <tr>
+                        <td>PerfCounters</td>
+                        <td>Valeurs incohérentes</td>
+                        <td>CVE-2022-37969</td>
+                    </tr>
+                    <tr>
+                        <td>Boot Process</td>
+                        <td>Persistance Kernel</td>
+                        <td>CVE-2022-21894</td>
+                    </tr>
+                </tbody>
+            </table>
+
             <p>
-                Tout agent cognitif sélectionne l'information qui maximise l'utilité sémantique tout en minimisant le coût énergétique.
-                L'état optimal \( s^* \) est défini par la maximisation du ratio :
+                L'objectif est de restaurer la transparence via une <strong>"Contre-Mesure Symbiotique"</strong> utilisant l'IA et l'analyse forensique externe.
             </p>
 
-            <div class="math-block">
-                $$ J(s) = \frac{\mathcal{C}(s \mid \Omega)}{\mathcal{H}(s) + \epsilon} $$
+            <div style="margin-top: 40px;">
+                <a href="https://github.com/Inphinie/WSSP-Forensics" style="color: var(--accent-color); text-decoration: none; border: 1px solid var(--accent-color); padding: 10px 20px; border-radius: 4px;">
+                    SOURCE_CODE >> ACCESS_REPO
+                </a>
             </div>
-
-            <p>
-                Où \( \mathcal{C} \) représente l'alignement contextuel (Vérité) et \( \mathcal{H} \) représente le coût entropique (Complexité/Chaos).
-            </p>
-
-            <div class="section-title">Architecture du Projet</div>
-            <p>
-                Ce dépôt contient la documentation formelle, les preuves mathématiques et les algorithmes de sélection (LMC-Select) dérivés de cette théorie.
-                Il vise à fournir une base open-source pour l'alignement des modèles d'IA et la compréhension de la cognition biologique.
-            </p>
-
-            <a href="https://github.com/Inphinie/CEML-LMC-Unified" class="btn">→ Voir le Dépôt GitHub</a>
         </section>
     </div>
 
     <footer>
         <p>
-            ARCHITECTED BY LICHEN-COLLECTIVES // 0xPROTO<br>
-            Authored by Bryan Ouellette (Inphinie)<br>
-            &copy; 2026 Open Research Ecosystem
+            PROJECT: WSSP-FORENSICS // MAINTAINER: BRYAN OUELLETTE<br>
+            LICENCE: MIT // LICHEN-COLLECTIVES &copy; 2026
         </p>
     </footer>
 
